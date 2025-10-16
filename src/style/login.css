@@ -1,0 +1,109 @@
+a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--orange-300);
+}
+
+label {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+input {
+    width: 100%;
+    border: 3px solid var(--orange-300);
+    border-radius: var(--rounded-full);
+    padding: 0.6rem 1rem;
+    font-size: var(--text-sm);
+}
+
+input::placeholder {
+    color: var(--orange-300);
+}
+
+form button {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--orange-300);
+    padding: 1rem 1.25rem;
+    border-radius: var(--rounded-full);
+
+}
+
+.title {
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--text-6xl);
+    margin-bottom: 6rem;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    background-color: var(--orange-500);
+}
+
+.logo-container #e {
+    position: absolute;
+    top: 6rem;
+    z-index: 2;
+}
+
+.logo-container #shoe {
+    position: absolute;
+    top: calc(6rem + 18.75rem);
+    left: 32.5rem;
+    z-index: 3;
+}
+
+.logo-container #logo {
+    position: absolute;
+    top: 100%;
+}
+
+.side-container {
+    color: var(--orange-300);
+    width: 40%;
+    border-radius: 2rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 12rem 4rem 0px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.a-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
