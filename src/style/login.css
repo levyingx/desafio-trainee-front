@@ -1,3 +1,7 @@
+body {
+    background-color: var(--orange-500);
+}
+
 a {
     font-weight: 600;
     text-decoration: none;
@@ -9,11 +13,11 @@ label {
     font-size: 1.5rem;
 }
 
-input {
+.form-input {
     width: 100%;
     border: 3px solid var(--orange-300);
     border-radius: var(--rounded-full);
-    padding: 0.6rem 1rem;
+    padding: 0.75rem 1rem;
     font-size: var(--text-sm);
 }
 
@@ -28,7 +32,6 @@ form button {
     background-color: var(--orange-300);
     padding: 1rem 1.25rem;
     border-radius: var(--rounded-full);
-
 }
 
 .title {
@@ -40,33 +43,20 @@ form button {
 .logo-container {
     display: flex;
     flex-direction: column;
-    position: relative;
+    justify-content: flex-end;
     width: 60%;
     background-color: var(--orange-500);
 }
 
-.logo-container #e {
-    position: absolute;
-    top: 6rem;
-    z-index: 2;
-}
-
-.logo-container #shoe {
-    position: absolute;
-    top: calc(6rem + 18.75rem);
-    left: 32.5rem;
-    z-index: 3;
-}
-
 .logo-container #logo {
-    position: absolute;
-    top: 100%;
+    margin: 2rem 6rem;
 }
 
 .side-container {
     color: var(--orange-300);
     width: 40%;
-    border-radius: 2rem;
+    border-radius: 2rem 0 0 2rem;
+    background-color: white;
 }
 
 .form-container {
@@ -105,5 +95,19 @@ form button {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    width: 100%;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 3px solid var(--orange-300);
+    border-radius: var(--rounded-full);
+    padding: 0.75rem 1rem;
+    font-size: var(--text-sm);
+}
+
+.password-container input {
     width: 100%;
 }
