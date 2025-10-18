@@ -29,7 +29,7 @@ input::placeholder {
     color: var(--orange-300);
     font-weight: 700;
     font-size: 1rem;
-    padding: 0.75rem 1.25rem;
+    padding: 0.65rem 1.25rem;
     background-color: white;
     border: 2.5px solid var(--orange-300);
     border-radius: var(--rounded-full);
@@ -40,7 +40,7 @@ button[type="submit"] {
     font-weight: 700;
     font-size: 1rem;
     background-color: var(--orange-300);
-    padding: 1rem 1.25rem;
+    padding: 0.75rem 1.25rem;
     border: 0;
     border-radius: var(--rounded-full);
 }
