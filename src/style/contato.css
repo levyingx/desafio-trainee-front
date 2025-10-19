@@ -56,23 +56,3 @@ nav .a-container a {
 .info-container {
     color: var(--gray-600);
 }
-
-footer {
-    width: 100%;
-    color: white;
-    background-color: var(--pink-600);
-}
-
-footer .section {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: red;
-}
-
-footer .main-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 4rem;
-}
