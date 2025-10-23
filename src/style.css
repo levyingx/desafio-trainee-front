@@ -4,12 +4,15 @@
   --main-bg-color: white;
 
   --orange-300: #F78520;
-  --orange-500: #8C490D; 
+  --orange-500: #8C490D;
+
   --gray-100: #F8F8F8;
   --gray-400: #7E7E7D;
   --gray-500: #5A5A5A;
   --gray-600: #393939;
+
   --pink-600: #81013A;
+  --pink-700: #48001D;
 
   --rounded-xl: 12px;
   --rounded-4xl: 32px;
@@ -27,19 +30,13 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
+  display: flex;
   width: 100%;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
-}
-
-#root {
-  display: flex;
-}
-
-/* Make media scale within their containers by default */
-img, svg, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  flex-direction: column;
+  justify-content: space-between;
 }

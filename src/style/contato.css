@@ -2,9 +2,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 100vw;
+    gap: 2rem;
+    width: 100%;
     padding: 1rem;
+    margin: 2rem 0;
 }
 
 nav svg {
@@ -36,15 +37,37 @@ nav .a-container a {
     cursor: pointer;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
 .title {
     font-family: "DM Sans", sans-serif;
     font-size: var(--text-6xl);
     color: var(--pink-600);
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
     letter-spacing: -1px;
 }
 
-.button-container button {
+.button-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.info-container {
+    color: var(--gray-600);
+}
+
+.info-container .button-container {
+    margin: 1rem;
+}
+
+.info-container button {
     background-color: var(--pink-600);
     padding: 10px 20px;
     color: var(--gray-100);
@@ -53,6 +76,96 @@ nav .a-container a {
     border-radius: var(--rounded-full);
 }
 
-.info-container {
+.info-container .inactive {
+    background-color: var(--gray-400);
+}
+
+.info-container span {
+    display: block;
+    width: 90%;
+    margin-left: 1.5rem;
+    font-weight: 300;
     color: var(--gray-600);
+    font-size: 14px;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: fit-content;
+    background-color: var(--gray-100);
+    border-radius: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 40%;
+}
+
+.form-container h2 {
+    margin-bottom: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--pink-700);
+}
+
+.form-container label {
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--pink-700);
+}
+
+.form-container input {
+    width: 100%;
+    border: 3px solid var(--pink-700);
+    border-radius: var(--rounded-full);
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-sm);
+}
+
+.form-container .button-container {
+    justify-content: flex-end;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-container button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 8px 20px;
+    color: var(--pink-600);
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 3px solid var(--pink-600);
+    border-radius: var(--rounded-full);
+}
+
+.form-container button[type="submit"] {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 8px 20px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--pink-600);
+    border: 0;
+    border-radius: var(--rounded-full);
+}
+
+.input-container {
+    margin-bottom: 1.75rem;
 }

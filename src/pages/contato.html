@@ -27,50 +27,55 @@
             <a>Contato</a>
         </div>
     </nav>
-    <h1 class="title">Contato</h1>
+    <main>
+        <section>
+            <h1 class="title">Contato</h1>
 
-    <div class="contato-container">
-        <div>
-            <img src="../assets/mapa_natal_shopping.svg" alt="Mapa">
-            <div class="info-container">
-                <div class="button-container">
-                    <button>Unidades Natal Shopping</button>
-                    <button>Unidades Midway</button>
+            <div class="contato-container">
+                <div style="width: 60%;">
+                    <img class="mapa" src="../assets/mapa_natal_shopping.svg" alt="Mapa">
+                    <div class="info-container">
+                        <div class="button-container">
+                            <button>Unidades Natal Shopping</button>
+                            <button class="inactive">Unidades Midway</button>
+                        </div>
+                        <span>Avenida Senador Salgado Filho, 2234, Av. das Brancas Dunas, 47 - Candelária, Natal - RN,
+                            59064-900</span>
+                    </div>
                 </div>
-                <span>Avenida Senador Salgado Filho, 2234, Av. das Brancas Dunas, 47 - Candelária, Natal - RN,
-                    59064-900</span>
+                <div class="form-container">
+                    <h2>Vem falar com a gente!</h2>
+                    <form action="">
+                        <div class="input-container">
+                            <div class="label-container">
+                                <label for="nome">Seu nome</label>
+                                <input type="nome" id="nome" name="nome" placeholder="João Mário" required>
+                            </div>
+                            <div class="label-container">
+                                <label for="idade">Idade</label>
+                                <input type="number" name="idade" id="idade" placeholder="23">
+                            </div>
+                            <div class="label-container">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="joao.mario@email.com" required>
+                            </div>
+                            <div class="label-container">
+                                <label for="mensagem">Mensagem</label>
+                                <input type="text" name="mensagem" id="mensagem" placeholder="Escreva a sua mensagem.">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button>Cancelar</button>
+                            <button type="submit">
+                                <span>Enviar</span>
+                                <img src="../assets/icons/send.svg" alt=">">
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="form-container">
-            <h2>Vem falar com a gente!</h2>
-            <form action="">
-                <div class="input-container">
-                    <div class="label-container">
-                        <label for="nome">Seu nome</label>
-                        <input type="nome" id="nome" name="nome" placeholder="João Mário" required>
-                    </div>
-                    <div class="label-container">
-                        <label for="idade">Idade</label>
-                        <input type="number" name="idade" id="idade" placeholder="23">
-                    </div>
-                    <div class="label-container">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="joao.mario@email.com" required>
-                    </div>
-                    <div class="label-container">
-                        <input type="text" name="mensagem" id="mensagem" placeholder="Escreva a sua mensagem.">
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button>Cancelar</button>
-                    <button type="submit">
-                        <span>Enviar</span>
-                        <img src="../assets/icons/send.svg" alt=">">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer>
         <div class="main-container">
             <img class="logo" src="../assets/logo_desc.svg" alt="Logo">
