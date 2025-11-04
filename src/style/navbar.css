@@ -12,18 +12,27 @@ nav svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 3px 4px 9px inset rgba(54, 54, 54, 0.05), -30px -30px 4px inset white;
+    box-shadow: 3px 4px 9px inset rgba(54, 54, 54, 0.05);
     border-radius: var(--rounded-full);
+    cursor: pointer;
 }
 
-nav .a-container {
+nav div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.25rem 1rem;
-    gap: 8rem;
+    border: 1px solid rgba(255, 75, 165, 0.5);
     border-radius: var(--rounded-full);
-    box-shadow: 2px 4px 14px inset rgba(54, 54, 54, 0.05), -30px -30px 4px inset white;
+    box-shadow: 0px 12px 20px inset rgba(0, 0, 0, 0.15), -4px -4px 6px inset rgba(255, 255, 255, 0.1);
+}
+
+nav .a-container {
+    padding: 0.25rem 1rem;
+    gap: 4rem;
+}
+
+nav .logo {
+    display: none;
 }
 
 nav .a-container a {
@@ -31,8 +40,42 @@ nav .a-container a {
     font-size: 2rem;
     font-weight: bold;
     color: var(--gray-500);
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 1.25rem;
     background-color: transparent;
     letter-spacing: -1px;
     cursor: pointer;
+}
+
+nav .a-container a:last-child {
+    line-height: 0;
+}
+
+@media (max-width: 425px) {
+    nav {
+        position: sticky;
+    }
+
+    nav .icon-container {
+        width: auto;
+    }
+
+    nav .icon-container svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav .logo {
+        display: block;
+    }
+
+    nav .a-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    nav .a-container a {
+        display: none;
+    }
 }

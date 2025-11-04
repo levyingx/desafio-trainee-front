@@ -1,3 +1,16 @@
+nav a {
+    color: white !important;
+}
+
+main {
+    padding: 0 12rem;
+}
+
+.title {
+    color: var(--pink-600);
+    margin-bottom: 1rem !important;
+}
+
 .intro-container {
     display: flex;
     background-color: var(--pink-500);
@@ -11,8 +24,19 @@
     margin-bottom: 4rem;
 }
 
-.intro-container div img {
+.intro-container div #logo {
     width: 24rem;
+}
+
+.intro-container .text-container {
+    width: 50%;
+    padding: 0 6rem 4rem 0;
+}
+
+.intro-container #mascote {
+    width: fit-content;
+    transform: translateX(-10rem);
+    margin-bottom: 1rem;
 }
 
 .intro-container p {
@@ -27,7 +51,7 @@
     align-items: center;
     width: 100%;
     gap: 1rem;
-    padding: 3rem 0.5rem;
+    padding: 3rem 0.5rem 6rem;
     overflow: hidden;
 }
 
@@ -43,5 +67,115 @@
 
 .main-card {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
     background-color: var(--green-200);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.main-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 2rem 0 6rem 6rem;
+}
+
+.main-card .title {
+    color: black;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    height: min-content;
+    margin-bottom: 6rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: -2%;
+}
+
+.card img {
+    width: 70%;
+}
+
+.person-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    height: min-content;
+    margin-bottom: 8rem;
+}
+
+.person-card-container>div:first-child {
+    background-color: var(--orange-300);
+}
+
+.person-card-container>div:first-child>span {
+    background-color: var(--orange-500);
+}
+
+.person-card-container>div:nth-child(2) {
+    background-color: var(--green-400);
+}
+
+.person-card-container>div:nth-child(2)>span {
+    background-color: var(--green-600);
+}
+
+.person-card-container>div:nth-child(3) {
+    background-color: var(--pink-200);
+}
+
+.person-card-container>div:nth-child(3)>span {
+    background-color: var(--pink-400);
+}
+
+.person-card-container>div:nth-child(4) {
+    background-color: var(--aqua-300);
+}
+
+.person-card-container>div:nth-child(4)>span {
+    background-color: var(--aqua-500);
+}
+
+.person-card {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.person-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.person-card span {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    border-radius: var(--rounded-full);
+    padding: 10px;
+    font-weight: 600;
+    color: white;
 }

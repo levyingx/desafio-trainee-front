@@ -4,14 +4,25 @@
   --main-bg-color: white;
 
   --orange-300: #F78520;
+  --orange-400: #C06616;
   --orange-500: #8C490D;
 
+  --yellow-600: #F8C200;
+
   --green-200: #A1D54A;
+  --green-400: #62832A;
+  --green-600: #2A3A0E;
+
+  --aqua-300: #005842;
+  --aqua-500: #003426;
 
   --gray-100: #F8F8F8;
   --gray-400: #7E7E7D;
   --gray-500: #5A5A5A;
   --gray-600: #393939;
+
+  --pink-200: #D532A7;
+  --pink-400: #63124C;
   --pink-500: #BF0259;
   --pink-600: #81013A;
   --pink-700: #48001D;
@@ -20,7 +31,11 @@
   --rounded-4xl: 32px;
   --rounded-full: calc(infinity * 1px);
 
-  --text-sm: 0.875rem;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
   --text-6xl: 3.75rem;
 }
 
@@ -41,4 +56,29 @@ body,
   font-family: "Inter", sans-serif;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.title {
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--text-6xl);
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Tablet */
+@media (min-width: 680px) and (max-width: 768px) {
+    html {
+        background-color: green;
+    }
+}
+
+/* Celular */
+@media (max-width: 679px) {
+    html {
+        background-color: red;
+    }
 }
