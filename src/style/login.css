@@ -51,12 +51,29 @@ button[type="submit"] {
     margin-bottom: 6rem;
 }
 
+.mascot-container {
+    display: flex;
+    height: 100%;
+}
+
 .logo-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 60%;
     background-color: var(--orange-500);
+}
+
+.logo-container>div:first-child {
+    width: 100%;
+}
+
+.logo-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
 }
 
 .logo-container #logo {
@@ -122,4 +139,45 @@ button[type="submit"] {
 
 .password-container input {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    #root {
+        flex-direction: column;
+    }
+
+    .logo-container>div:first-child {
+        width: 100dvw;
+    }
+
+    .side-logo-container {
+        display: none;
+    }
+
+    .side-container {
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .form-container {
+        padding: 4rem 2rem 0;
+    }
+
+    .mascot-container {
+        width: 100dvw;
+        margin-bottom: 2rem;
+    }
+
+    .title {
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .a-container {
+        margin-bottom: 2rem;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
 }
