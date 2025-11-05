@@ -13,6 +13,8 @@ main {
 
 .intro-container {
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
     background-color: var(--pink-500);
     border-radius: 0 0 16px 16px;
 }
@@ -21,20 +23,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 4rem;
+    width: 50%;
 }
 
 .intro-container div #logo {
-    width: 24rem;
+    width: clamp(12rem, 28vw, 24rem);
+    max-width: 100%;
 }
 
 .intro-container .text-container {
-    width: 50%;
-    padding: 0 6rem 4rem 0;
+    padding: 0 6rem 0 0;
 }
 
 .intro-container #mascote {
     width: fit-content;
+    max-width: 100%;
     transform: translateX(-10rem);
     margin-bottom: 1rem;
 }
@@ -74,6 +77,10 @@ main {
     overflow: hidden;
 }
 
+.main-card .logo-flip {
+    display: none;
+}
+
 .main-card div {
     display: flex;
     flex-direction: column;
@@ -91,28 +98,11 @@ main {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     width: 100%;
-    height: min-content;
     margin-bottom: 6rem;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.card h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: "DM Sans", sans-serif;
-    letter-spacing: -2%;
-}
-
-.card img {
-    width: 70%;
+.card-container img {
+    max-width: 500px;
 }
 
 .person-card-container {
@@ -120,7 +110,7 @@ main {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
     width: 100%;
-    height: min-content;
+    max-width: 1400px;
     margin-bottom: 8rem;
 }
 
@@ -178,4 +168,83 @@ main {
     padding: 10px;
     font-weight: 600;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        overflow-x: hidden;
+        padding-bottom: 4rem;
+    }
+
+    .intro-container div {
+        width: 100%;
+    }
+
+    .intro-container #mascote {
+        max-width: 150%;
+        transform: translateX(-17rem);
+    }
+
+    .intro-container .text-container {
+        padding: 0 1rem;
+    }
+
+    #carousel-container {
+        padding: 4rem 1rem 4rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .main-card div {
+        padding: 2rem 1rem;
+    }
+
+    .main-card p {
+        line-height: 140%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .main-card {
+        flex-direction: column;
+    }
+
+    .main-card .logo-flip {
+        display: block;
+    }
+
+    .main-card .logo {
+        display: none;
+    }
+
+    .main-card div {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .card-container img {
+        max-width: 100%;
+    }
+
+    .person-card-container {
+        padding: 0 4rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+/* 4K */
+@media (min-width: 1780px) {
+    .card-container {
+        display: flex;
+    }
+
+    .intro-container .text-container {
+        width: 50%;
+    }
 }

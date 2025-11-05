@@ -85,14 +85,10 @@ nav .a-container a:last-child {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     nav .a-container {
-        gap: 0;
+        gap: 1.5rem;
     }
 
     nav .a-container a {
         padding: 0.25rem 0.9rem;
-    }
-
-    html {
-        background-color: brown;
     }
 }
