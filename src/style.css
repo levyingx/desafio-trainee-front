@@ -68,17 +68,3 @@ body,
 p {
   font-size: 18px;
 }
-
-/* Tablet */
-@media (min-width: 680px) and (max-width: 768px) {
-    html {
-        background-color: green;
-    }
-}
-
-/* Celular */
-@media (max-width: 679px) {
-    html {
-        background-color: red;
-    }
-}

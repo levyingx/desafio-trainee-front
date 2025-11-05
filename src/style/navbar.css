@@ -1,7 +1,7 @@
 nav {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
     width: 100%;
     padding: 1rem;
@@ -27,8 +27,12 @@ nav div {
 }
 
 nav .a-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.25rem 1rem;
-    gap: 4rem;
+    gap: 3rem;
+    align-self: stretch;
 }
 
 nav .logo {
@@ -50,22 +54,20 @@ nav .a-container a:last-child {
     line-height: 0;
 }
 
-@media (max-width: 425px) {
+/* Tablet */
+@media (max-width: 768px) {
     nav {
         position: sticky;
+        align-items: stretch;
     }
 
     nav .icon-container {
         width: auto;
     }
 
-    nav .icon-container svg {
-        width: 60px;
-        height: 60px;
-    }
-
     nav .logo {
         display: block;
+        padding: 0.25rem 1rem;
     }
 
     nav .a-container {
@@ -73,9 +75,24 @@ nav .a-container a:last-child {
         justify-content: center;
         align-items: center;
         flex-grow: 1;
+        align-self: stretch;
     }
 
     nav .a-container a {
         display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav .a-container {
+        gap: 0;
+    }
+
+    nav .a-container a {
+        padding: 0.25rem 0.9rem;
+    }
+
+    html {
+        background-color: brown;
     }
 }
