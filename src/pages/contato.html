@@ -8,23 +8,33 @@
     <link rel="shortcut icon" href="../assets/icons/logo_icon.svg">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../style/contato.css">
-    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="/src/style/navbar.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
 </head>
 
 <body>
     <nav>
-        <div>
-            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="icon-container">
+            <svg class="icon-desktop" width="64" height="64" viewBox="0 0 72 72" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M 37.0801 -7.5244 M 18.874 15.9521 C 33.1749 8.462 55.2552 32.5791 59.9697 50.1934 C 52.1121 53.1565 26.9679 49.617 18.7959 43.6084 C 11.2526 38.0937 6.9305 22.29 18.874 15.9521 Z"
                     fill="#5A5A5A" />
             </svg>
+            <svg class="icon-mobile" width="64" height="64" viewBox="0 0 72 72" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M 37.0801 -7.5244 M 18.874 15.9521 C 33.1749 8.462 55.2552 32.5791 59.9697 50.1934 C 52.1121 53.1565 26.9679 49.617 18.7959 43.6084 C 11.2526 38.0937 6.9305 22.29 18.874 15.9521 Z"
+                    fill="#D9D9D9" />
+            </svg>
         </div>
         <div class="a-container">
+            <img class="logo" src="../assets/logo_white.svg">
             <a>Início</a>
             <a>Acervo</a>
             <a>Sobre nós</a>
             <a>Contato</a>
+            <a><img src="../assets/icons/user_dark.svg"></a>
         </div>
     </nav>
     <main>
@@ -32,7 +42,7 @@
             <h1 class="title">Contato</h1>
 
             <div class="contato-container">
-                <div style="width: 60%;">
+                <div class="mapa-container">
                     <img class="mapa" src="../assets/mapa_natal_shopping.svg" alt="Mapa">
                     <div class="info-container">
                         <div class="button-container">
@@ -78,46 +88,50 @@
     </main>
     <footer>
         <div class="main-container">
-            <img class="logo" src="../assets/logo_desc.svg" alt="Logo">
-            <div class="section">
-                <h1>Contato</h1>
-                <div>
-                    <img class="icon" src="../assets/icons/phone.svg">
-                    <span>(84) 9 9999-2222</span>
-                </div>
-                <div>
-                    <img class="icon" src="../assets/icons/globe.svg">
-                    <span>www.theka.com.br</span>
-                </div>
-                <div>
-                    <img class="icon" src="../assets/icons/pin.svg">
-                    <span>Natal, RN</span>
-                </div>
+            <div class="logo-container">
+                <img class="logo" src="../assets/logo_desc.svg" alt="Logo">
             </div>
-            <div class="section">
-                <h1>Redes sociais</h1>
-                <div>
-                    <img class="icon" src="../assets/icons/instagram.svg">
-                    <span>@theka.biblioteca</span>
+            <div class="section-container">
+                <div class="section">
+                    <h1>Contato</h1>
+                    <div>
+                        <img class="icon" src="../assets/icons/phone.svg">
+                        <span>(84) 9 9999-2222</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/globe.svg">
+                        <span>www.theka.com.br</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/pin.svg">
+                        <span>Natal, RN</span>
+                    </div>
                 </div>
-                <div>
-                    <img class="icon" src="../assets/icons/tiktok.svg">
-                    <span>@theka.biblioteca</span>
+                <div class="section">
+                    <h1>Redes sociais</h1>
+                    <div>
+                        <img class="icon" src="../assets/icons/instagram.svg">
+                        <span>@theka.biblioteca</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/tiktok.svg">
+                        <span>@theka.biblioteca</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/x.svg">
+                        <span>@theka.biblioteca</span>
+                    </div>
                 </div>
-                <div>
-                    <img class="icon" src="../assets/icons/x.svg">
-                    <span>@theka.biblioteca</span>
-                </div>
-            </div>
-            <div class="section">
-                <h1>Ajuda</h1>
-                <div>
-                    <img class="icon" src="../assets/icons/i.svg">
-                    <span>Central de ajuda</span>
-                </div>
-                <div>
-                    <img class="icon" src="../assets/icons/question_mark.svg">
-                    <span>FAQ</span>
+                <div class="section">
+                    <h1>Ajuda</h1>
+                    <div>
+                        <img class="icon" src="../assets/icons/i.svg">
+                        <span>Central de ajuda</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/question_mark.svg">
+                        <span>FAQ</span>
+                    </div>
                 </div>
             </div>
         </div>

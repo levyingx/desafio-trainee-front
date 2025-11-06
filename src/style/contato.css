@@ -1,42 +1,3 @@
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    padding: 1rem;
-    margin: 2rem 0;
-}
-
-nav svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 3px 4px 9px inset rgba(54, 54, 54, 0.05), -30px -30px 4px inset white;
-    border-radius: var(--rounded-full);
-}
-
-nav .a-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.25rem 1rem;
-    gap: 8rem;
-    border-radius: var(--rounded-full);
-    box-shadow: 2px 4px 14px inset rgba(54, 54, 54, 0.05), -30px -30px 4px inset white;
-}
-
-nav .a-container a {
-    font-family: "DM Sans", sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--gray-500);
-    padding: 0.25rem 1rem;
-    background-color: transparent;
-    letter-spacing: -1px;
-    cursor: pointer;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -47,6 +8,10 @@ main {
 
 .title {
     color: var(--pink-600);
+}
+
+section {
+    margin: 0 1rem;
 }
 
 .button-container {
@@ -60,7 +25,7 @@ main {
 }
 
 .info-container .button-container {
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .info-container button {
@@ -92,6 +57,17 @@ main {
     width: fit-content;
     background-color: var(--gray-100);
     border-radius: 20px;
+}
+
+.mapa-container {
+    width: 60%;
+}
+
+.mapa {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px 20px 0 0;
 }
 
 .form-container {
@@ -164,4 +140,29 @@ main {
 
 .input-container {
     margin-bottom: 1.75rem;
+}
+
+@media (max-width: 920px) {
+    .contato-container {
+        flex-direction: column;
+    }
+
+    .mapa-container {
+        width: 100%;
+    }
+
+    .info-container .button-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 2rem;
+        width: fit-content;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .label-container label {
+        margin-bottom: 0.5rem;
+    }
 }
