@@ -6,12 +6,16 @@
   --orange-300: #F78520;
   --orange-400: #C06616;
   --orange-500: #8C490D;
+  --orange-600: #5B2D05;
 
   --yellow-600: #F8C200;
 
   --green-200: #A1D54A;
   --green-400: #62832A;
   --green-600: #2A3A0E;
+
+  --olive-300: #81AB3A;
+  --olive-600: #2A3A0E;
 
   --aqua-300: #005842;
   --aqua-500: #003426;
@@ -21,6 +25,7 @@
   --gray-500: #5A5A5A;
   --gray-600: #393939;
 
+  --pink-100: #FFC1CF;
   --pink-200: #D532A7;
   --pink-400: #63124C;
   --pink-500: #BF0259;
@@ -36,7 +41,7 @@
   --text-lg: 18px;
   --text-xl: 20px;
   --text-2xl: 24px;
-  --text-6xl: 3.75rem;
+  --text-6xl: 64px;
 }
 
 * {
