@@ -87,14 +87,29 @@
 
         <h1 class="title">Nossos valores</h1>
         <div class="card-container">
-            <div>
-                <img src="../assets/acesso_para_todos.svg" style="width: 100%; height: 100%;">
+            <div class="value-card" data-card="1">
+                <div class="card-front">
+                    <img src="../assets/acesso_para_todos.svg" style="width: 100%; height: 100%;">
+                </div>
+                <div class="card-overlay">
+                    <img src="../assets/acesso_para_todos_2.svg" style="width: 100%; height: 100%;">
+                </div>
             </div>
-            <div>
-                <img src="../assets/amor_pela_leitura.svg" style="width: 100%; height: 100%;">
+            <div class="value-card" data-card="2">
+                <div class="card-front">
+                    <img src="../assets/amor_pela_leitura.svg" style="width: 100%; height: 100%;">
+                </div>
+                <div class="card-overlay">
+                    <img src="../assets/amor_pela_leitura_2.svg" style="width: 100%; height: 100%;">
+                </div>
             </div>
-            <div>
-                <img src="../assets/comunidade_e_troca.svg" style="width: 100%; height: 100%;">
+            <div class="value-card" data-card="3">
+                <div class="card-front">
+                    <img src="../assets/comunidade_e_troca.svg" style="width: 100%; height: 100%;">
+                </div>
+                <div class="card-overlay">
+                    <img src="../assets/comunidade_e_troca_2.svg" style="width: 100%; height: 100%;">
+                </div>
             </div>
         </div>
 
@@ -102,19 +117,23 @@
         <div class="person-card-container">
             <div class="person-card">
                 <img src="../assets/people/maria_marta.svg">
-                <span>Maria Marta</span>
+                <span class="person-name">Maria Marta</span>
+                <span class="person-role">Bibliotecária</span>
             </div>
             <div class="person-card">
                 <img src="../assets/people/julia_maria.svg">
-                <span>Júlia Maria</span>
+                <span class="person-name">Júlia Maria</span>
+                <span class="person-role">Coordenadora</span>
             </div>
             <div class="person-card">
                 <img src="../assets/people/jeniffer_oliveira.svg">
-                <span>Jeniffer Oliveira</span>
+                <span class="person-name">Jeniffer Oliveira</span>
+                <span class="person-role">Assistente</span>
             </div>
             <div class="person-card">
                 <img src="../assets/people/josivaldo_lopes.svg">
-                <span>Josivaldo Lopes</span>
+                <span class="person-name">Josivaldo Lopes</span>
+                <span class="person-role">Gerente</span>
             </div>
         </div>
     </main>
@@ -170,6 +189,7 @@
         <span class="author">Mockup desenvolvido por EJECT</span>
     </footer>
     <script type="module" src="../main.ts"></script>
+    <script type="module" src="../script/valueCards.ts"></script>
 </body>
 
 </html>
