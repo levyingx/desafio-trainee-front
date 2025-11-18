@@ -1,3 +1,4 @@
+import type { Novidades } from "./types/Novidades"
 import type Livro from "./types/Livro"
 import { api, getLivroById } from "./api"
 

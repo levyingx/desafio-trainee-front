@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acervo</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style/inicio.css">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/carrossel.css">
+    <link rel="stylesheet" href="../style/acervo.css">
+    <link rel="stylesheet" href="../style/catalogo.css">
+</head>
+
+<body>
+    <nav>
+        <div class="icon-container">
+            <svg width="64" height="64" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M 37.0801 -7.5244 M 18.874 15.9521 C 33.1749 8.462 55.2552 32.5791 59.9697 50.1934 C 52.1121 53.1565 26.9679 49.617 18.7959 43.6084 C 11.2526 38.0937 6.9305 22.29 18.874 15.9521 Z"
+                    fill="#5A5A5A" />
+            </svg>
+        </div>
+        <div class="a-container">
+            <img class="logo" src="../assets/logo_gray.svg">
+            <a href="../../index.html">Início</a>
+            <a href="../pages/acervo.html">Acervo</a>
+            <a href="../pages/sobre-nos.html">Sobre nós</a>
+            <a href="../pages/contato.html">Contato</a>
+            <a href=""><img src="../assets/icons/user_dark.svg"></a>
+        </div>
+    </nav>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <svg class="logo" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704 195">
+                <g clip-path="url(#a)" fill="#5A5A5A">
+                    <path
+                        d="m569.7 0-33.1 6.3s10.4 27.8-1 60.6c-12-19-34.1-33.1-54.2-30V6.4H446v181.5h35.4v-60.2a55 55 0 0 0 23.9 3.6 67 67 0 0 0 16-3.3c12.8 26 4.6 61.1 4.6 61.1l38.2 6 1.7-20v-.4c.6-19.2-2.1-45.1-12-71.4C588.5 53.4 569.6 0 569.6 0m-83.2 94.3c-6.2-4.4-9.8-17 .1-22 11.9-6 30.2 13.2 34.2 27.2a58 58 0 0 1-34.3-5.2M182.8 6v55.7c93.2-70.9 103 71 88.3 133.4l-35.3-6c4-24 8-81.2-6.5-98.9-21-25.7-46.5 10-46.5 29.2v69.7H147V6zM703 195v-23.6l-4.7-96a38 38 0 0 0-2.8-12.5C690.1 50 680.5 47 675.8 45c-21.3-8.6-39.2-1.5-60 3.8l7.9 30a72 72 0 0 1 17-7.2h.2a19.7 19.7 0 0 1 24.7 15.6c-44.7 6.6-106.8 28.7-85.5 78.5 14.6 34.1 65.7 31.2 85.1 2.6l.1 6-.3 14.6zm-43-63.8c-29 63.9-64.8 17.4-6.5-9.2q5.5-2.4 11-3.8-1.5 6.6-4.5 13M139.4 13.9v31.8H91.7V189H51.9c2.1-48 5.6-95.2 0-143.3l-52-.2V13.9zm285.3 135.6a56 56 0 0 1-23 9.3c-28.4 4.3-70 8.8-64.8-33.7q22.9 6.5 39.4 6.4C430.5 131.5 435 85 420 63c-26.9-39.4-94.3-11.8-112 27.8l-24.5-6.5 4 28.7 13.4 3.8q-1 8.2-.6 17.2c3.5 57 83.4 67.6 125.7 51.7 2.4-.9 1.3-.4 2.2-.9l1.9-.8 8.8-4.4zM366.4 80c10.5-9.2 29.2-16 33.4-7.2 1.2 2.4 2 5.9-1.9 11.5-3.7 5.7-16.5 13.4-34.6 15.2-5.8.6-9.2.6-15.7 0 6.2-9.3 9.9-11.7 18.8-19.5" />
+                </g>
+                <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h703.1v195H0z" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <div class="button-container">
+                <a href="#">Início</a>
+                <a href="#">Acervo</a>
+                <a href="#">Sobre nós</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <main>
+        <div class="novidades-da-semana-container">
+            <div>
+                <h1>Novidades da semana</h1>
+                <h2 id="title-element">Titulo do livro</h2>
+                <h3 id="author-element">Nome</h3>
+            </div>
+            <div>
+                carrossel
+            </div>
+        </div>
+
+        <h2 class="title">Veja nosso catálogo</h2>
+
+        <div class="search-container">
+            <input type="text" name="search" id="search" placeholder="Fazer busca">
+            <div>
+                <select class="filter-element" name="genero" id="genero">
+                    <option value="genero-1">Gênero</option>
+                </select class="filter-element">
+                <select class="filter-element" name="editora" id="editora">
+                    <option value="editora1">Editora</option>
+                </select class="filter-element">
+                <button id="search-btn" type="submit">
+                    <span>Buscar</span>
+                    <img src="../assets/icons/magnifying-glass.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <div class="catalogo-container" id="catalogo-container">
+                <div class="catalogo-element" id="book-1"></div>
+                <div class="catalogo-element" id="book-2"></div>
+                <div class="catalogo-element" id="book-3"></div>
+                <div class="catalogo-element" id="book-4"></div>
+                <div class="catalogo-element" id="book-5"></div>
+                <div class="catalogo-element" id="book-6"></div>
+                <div class="catalogo-element" id="book-7"></div>
+                <div class="catalogo-element" id="book-8"></div>
+                <div class="catalogo-element" id="book-9"></div>
+                <div class="catalogo-element" id="book-10"></div>
+                <div class="catalogo-element" id="book-11"></div>
+                <div class="catalogo-element" id="book-12"></div>
+                <div class="catalogo-element" id="book-13"></div>
+                <div class="catalogo-element" id="book-14"></div>
+                <div class="catalogo-element" id="book-15"></div>
+            </div>
+            <div class="pager-container">
+                <button class="page-btn" id="previous">
+                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.07524 1.07617L0.575244 8.57617C0.470356 8.68069 0.387141 8.80488 0.330361 8.94163C0.273582 9.07837 0.244351 9.22498 0.244351 9.37305C0.244351 9.52111 0.273582 9.66772 0.330361 9.80447C0.387141 9.94122 0.470356 10.0654 0.575244 10.1699L8.07524 17.6699C8.28658 17.8813 8.57323 18 8.87211 18C9.171 18 9.45764 17.8813 9.66899 17.6699C9.88033 17.4586 9.99906 17.1719 9.99906 16.873C9.99906 16.5742 9.88033 16.2875 9.66899 16.0762L2.96492 9.37211L9.66992 2.66799C9.88127 2.45665 10 2.17001 10 1.87112C10 1.57224 9.88127 1.28559 9.66992 1.07425C9.45858 0.862905 9.17193 0.744173 8.87305 0.744173C8.57416 0.744173 8.28752 0.862905 8.07617 1.07425L8.07524 1.07617Z" fill="white"/>
+                    </svg>
+                </button>
+                <button class="middle-page-number-btn" id="first-page">1</button>
+                <button class="page-number-btn" id="second-page">2</button>
+                <button class="page-number-btn" id="third-page">3</button>
+                <button class="page-btn" id="next">
+                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.92476 16.9238L9.42476 9.42383C9.52964 9.31931 9.61286 9.19512 9.66964 9.05837C9.72642 8.92163 9.75565 8.77502 9.75565 8.62695C9.75565 8.47889 9.72642 8.33228 9.66964 8.19553C9.61286 8.05878 9.52964 7.93459 9.42476 7.83008L1.92476 0.330077C1.71342 0.118732 1.42677 0 1.12789 0C0.829003 0 0.542358 0.118732 0.331014 0.330077C0.11967 0.541421 0.000937703 0.828065 0.0009377 1.12695C0.000937697 1.42584 0.11967 1.71248 0.331014 1.92383L7.03508 8.62789L0.330077 15.332C0.118733 15.5433 0 15.8299 0 16.1288C0 16.4277 0.118733 16.7144 0.330077 16.9257C0.541421 17.137 0.828066 17.2558 1.12695 17.2558C1.42584 17.2558 1.71248 17.137 1.92383 16.9257L1.92476 16.9238Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-container">
+            <div class="logo-container">
+                <img class="logo" src="../assets/logo_desc.svg" alt="Logo">
+            </div>
+            <div class="section-container">
+                <div class="section">
+                    <h1>Contato</h1>
+                    <div>
+                        <img class="icon" src="../assets/icons/phone.svg">
+                        <span>(84) 9 9999-2222</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/globe.svg">
+                        <span>www.theka.com.br</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/pin.svg">
+                        <span>Natal, RN</span>
+                    </div>
+                </div>
+                <div class="section">
+                    <h1>Redes sociais</h1>
+                    <div>
+                        <img class="icon" src="../assets/icons/instagram.svg">
+                        <span>@theka.biblioteca</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/tiktok.svg">
+                        <span>@theka.biblioteca</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/x.svg">
+                        <span>@theka.biblioteca</span>
+                    </div>
+                </div>
+                <div class="section">
+                    <h1>Ajuda</h1>
+                    <div>
+                        <img class="icon" src="../assets/icons/i.svg">
+                        <span>Central de ajuda</span>
+                    </div>
+                    <div>
+                        <img class="icon" src="../assets/icons/question_mark.svg">
+                        <span>FAQ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="author">Mockup desenvolvido por EJECT</span>
+    </footer>
+
+    <script type="module" src="../main.ts"></script>
+    <script type="module" src="../script/carrosselLivros.ts"></script>
+    <script type="module" src="../script/sidebar.ts"></script>
+    <script type="module" src="../script/catalogo.ts"></script>
+</body>
+
+</html>

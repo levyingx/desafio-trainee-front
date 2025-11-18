@@ -1,6 +1,6 @@
-const valueCards = document.querySelectorAll('.value-card') as NodeListOf<HTMLElement>
+const equipeCards = document.querySelectorAll('.value-card') as NodeListOf<HTMLElement>
 
-valueCards.forEach(card => {
+equipeCards.forEach(card => {
     card.addEventListener('click', () => {
         card.classList.toggle('active')
     })
