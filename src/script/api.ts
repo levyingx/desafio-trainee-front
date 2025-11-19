@@ -5,7 +5,8 @@ import type { Novidades } from './types/Novidades'
 export const api = {
     url: 'https://thekaapi.pythonanywhere.com',
     livrosEndpoint: `/livros/`,
-    novidadesEndpoint: `/livros/novidades`
+    novidadesEndpoint: `/livros/novidades`,
+    authEndpoint: `/auth/token/`
 }
 
 export async function getCatalogo(url: string, endpoint: string, page?: string): Promise<Catalogo | null> {

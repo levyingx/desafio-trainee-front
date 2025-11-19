@@ -27,10 +27,10 @@
         <div class="a-container">
             <img class="logo" src="../assets/logo_gray.svg">
             <a href="../../index.html">Início</a>
-            <a href="../pages/acervo.html">Acervo</a>
-            <a href="../pages/sobre-nos.html">Sobre nós</a>
-            <a href="../pages/contato.html">Contato</a>
-            <a href=""><img src="../assets/icons/user_dark.svg"></a>
+            <a href="acervo.html">Acervo</a>
+            <a href="sobre-nos.html">Sobre nós</a>
+            <a href="contato.html">Contato</a>
+            <a href="login.html"><img src="../assets/icons/user_dark.svg"></a>
         </div>
     </nav>
 
@@ -48,10 +48,10 @@
                 </defs>
             </svg>
             <div class="button-container">
-                <a href="#">Início</a>
-                <a href="#">Acervo</a>
-                <a href="#">Sobre nós</a>
-                <a href="#">Contato</a>
+                <a href="../../index.html">Início</a>
+                <a href="acervo.html">Acervo</a>
+                <a href="sobre-nos.html">Sobre nós</a>
+                <a href="contato.html">Contato</a>
             </div>
         </div>
     </div>
@@ -59,8 +59,8 @@
 
     <main>
         <div class="novidades-da-semana-container">
-            <div>
-                <h1>Novidades da semana</h1>
+            <div class="novidades-info-desktop">
+                <h1 class="novidades-title">Novidades da semana</h1>
                 <h2 id="title-element">Titulo do livro</h2>
                 <h3 id="author-element">Nome</h3>
             </div>
@@ -70,24 +70,59 @@
                 <div class="estante-book" id="carousel-livro-3"></div>
                 <div class="estante-book" id="carousel-livro-4"></div>
                 <div class="estante-book" id="carousel-livro-5"></div>
-                <div class="estante-book" id="carousel-livro-6"></div>
             </div>
+        </div>
+
+        <div class="novidades-info-mobile">
+            <h1 class="novidades-title">Novidades da semana</h1>
+        </div>
+        <div id="estante-container-mobile">
+            <div class="estante-book" id="carousel-livro-mobile-1"></div>
+            <div class="estante-book" id="carousel-livro-mobile-2"></div>
+            <div class="estante-book" id="carousel-livro-mobile-3"></div>
+            <div class="estante-book" id="carousel-livro-mobile-4"></div>
+            <div class="estante-book" id="carousel-livro-mobile-5"></div>
+        </div>
+        <div class="novidades-info-mobile-text">
+            <h2 id="title-element-mobile">Titulo do livro</h2>
+            <h3 id="author-element-mobile">Nome</h3>
         </div>
 
         <h2 class="title">Veja nosso catálogo</h2>
 
-        <div class="search-container">
-            <input type="text" name="search" id="search" placeholder="Fazer busca">
-            <div>
-                <select class="filter-element" name="genero" id="genero">
+        <div class="search-wrapper">
+            <div class="search-container">
+                <input type="text" name="search" id="search" placeholder="Fazer busca">
+                <div>
+                    <select class="filter-element" name="genero" id="genero">
+                        <option value="genero-1">Gênero</option>
+                    </select class="filter-element">
+                    <select class="filter-element" name="editora" id="editora">
+                        <option value="editora1">Editora</option>
+                    </select class="filter-element">
+                    <button id="search-btn" type="submit">
+                        <span>Buscar</span>
+                        <img src="../assets/icons/magnifying-glass.svg" alt="" srcset="">
+                    </button>
+                </div>
+            </div>
+            <button id="filter-btn" type="button">
+                <img src="../assets/icons/filter.svg" alt="Filter">
+            </button>
+        </div>
+
+        <div id="filter-popup" class="filter-popup">
+            <div class="filter-popup-content">
+                <h1>Filtro</h1>
+                <select class="filter-popup-element" name="genero-popup" id="genero-popup">
                     <option value="genero-1">Gênero</option>
-                </select class="filter-element">
-                <select class="filter-element" name="editora" id="editora">
+                </select>
+                <select class="filter-popup-element" name="editora-popup" id="editora-popup">
                     <option value="editora1">Editora</option>
-                </select class="filter-element">
-                <button id="search-btn" type="submit">
-                    <span>Buscar</span>
-                    <img src="../assets/icons/magnifying-glass.svg" alt="" srcset="">
+                </select>
+                <button id="filtrar-btn" type="button">
+                    <span>Filtrar</span>
+                    <img src="../assets/icons/filter.svg" alt="Filter">
                 </button>
             </div>
         </div>
