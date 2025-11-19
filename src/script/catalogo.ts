@@ -58,6 +58,7 @@ function displayBooks(page: number) {
                 icon.alt = 'View'
 
                 viewButton.appendChild(icon)
+                viewButton.addEventListener('click', () => showPopup(e))
 
                 infoOverlay.appendChild(titulo)
                 infoOverlay.appendChild(desc)
@@ -106,4 +107,40 @@ document.getElementById('third-page')?.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
     displayBooks(paginaAtual)
+})
+
+function showPopup(livro: any) {
+    const popup = document.getElementById('livro-popup')
+    if (!popup) return
+
+    const popupCapa = document.getElementById('popup-capa') as HTMLImageElement
+    const popupTitulo = document.getElementById('popup-titulo')
+    const popupPaginas = document.getElementById('popup-paginas')
+    const popupEditora = document.getElementById('popup-editora')
+    const popupResumo = document.getElementById('popup-resumo')
+
+    const popupAutorAno = document.getElementById('popup-autor-ano')
+    
+    if (popupCapa) popupCapa.src = livro.capa
+    if (popupTitulo) popupTitulo.textContent = livro.titulo
+    if (popupAutorAno) popupAutorAno.textContent = `${livro.autor}, ${livro.ano_publicacao}`
+    if (popupResumo) popupResumo.textContent = livro.resumo
+    if (popupPaginas) popupPaginas.textContent = `páginas: ${livro.numero_paginas}`
+    if (popupEditora) popupEditora.textContent = livro.editora
+
+    popup.style.display = 'flex'
+}
+
+function closePopup() {
+    const popup = document.getElementById('livro-popup')
+    if (popup) {
+        popup.style.display = 'none'
+    }
+}
+
+document.getElementById('close-popup')?.addEventListener('click', closePopup)
+document.getElementById('livro-popup')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        closePopup()
+    }
 })
