@@ -105,6 +105,22 @@ document.getElementById('third-page')?.addEventListener('click', () => {
     setPagina(paginaAtual)
 })
 
+document.getElementById('previous')?.addEventListener('click', () => {
+    if (paginaAtual > 1) {
+        paginaAtual--
+        displayBooks(paginaAtual)
+        setPagina(paginaAtual)
+    }
+})
+
+document.getElementById('next')?.addEventListener('click', () => {
+    if (paginaAtual < 3) {
+        paginaAtual++
+        displayBooks(paginaAtual)
+        setPagina(paginaAtual)
+    }
+})
+
 window.addEventListener('resize', () => {
     displayBooks(paginaAtual)
 })
