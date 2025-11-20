@@ -1,14 +1,84 @@
 import type Catalogo from "./types/Catalogo";
-import { api, getCatalogo } from "./api"
+import { api, getCatalogo, getGeneros, getEditoras } from "./api"
 
 let paginaAtual = 1
-let data: Catalogo | null = await getCatalogo(api.url, api.livrosEndpoint)
-let next: Catalogo | null = await getCatalogo(api.url, api.livrosEndpoint, data?.next)
-let livroArray = data?.results ? [...data.results] : []
+let livroArray: any[] = []
 
-if (next?.results) {
-    livroArray.push(...next.results)
+async function loadBooks(generoId?: string, editoraId?: string) {
+    let url = api.url + api.livrosEndpoint
+    
+    if (generoId && !editoraId) {
+        url += '?genero=' + generoId
+    }
+    
+    if (!generoId && editoraId) {
+        url += '?editora=' + editoraId
+    }
+    
+    if (generoId && editoraId) {
+        url += '?genero=' + generoId + '&editora=' + editoraId
+    }
+    
+    console.log('URL:', url)
+    console.log('Query:', { generoId, editoraId })
+    
+    let data: Catalogo | null = await getCatalogo(api.url, api.livrosEndpoint, url)
+    let next: Catalogo | null = data?.next ? await getCatalogo(api.url, api.livrosEndpoint, data.next) : null
+    
+    livroArray = data?.results ? [...data.results] : []
+    
+    if (next?.results) {
+        livroArray.push(...next.results)
+    }
+    
+    console.log('Results:', livroArray)
+    
+    paginaAtual = 1
+    displayBooks(paginaAtual)
+    setPagina(paginaAtual)
 }
+
+loadBooks()
+
+async function populateFiltros() {
+    const generos = await getGeneros(api.url, api.generosEndpoint)
+    const editoras = await getEditoras(api.url, api.editorasEndpoint)
+
+    const generoSelect = document.getElementById('genero') as HTMLSelectElement
+    const generoPopupSelect = document.getElementById('genero-popup') as HTMLSelectElement
+    const editoraSelect = document.getElementById('editora') as HTMLSelectElement
+    const editoraPopupSelect = document.getElementById('editora-popup') as HTMLSelectElement
+
+    if (generos && generoSelect && generoPopupSelect) {
+        generos.forEach(genero => {
+            const option1 = document.createElement('option')
+            option1.value = genero.id.toString()
+            option1.textContent = genero.nome
+            generoSelect.appendChild(option1)
+
+            const option2 = document.createElement('option')
+            option2.value = genero.id.toString()
+            option2.textContent = genero.nome
+            generoPopupSelect.appendChild(option2)
+        })
+    }
+
+    if (editoras && editoraSelect && editoraPopupSelect) {
+        editoras.forEach(editora => {
+            const option1 = document.createElement('option')
+            option1.value = editora.id.toString()
+            option1.textContent = editora.nome
+            editoraSelect.appendChild(option1)
+
+            const option2 = document.createElement('option')
+            option2.value = editora.id.toString()
+            option2.textContent = editora.nome
+            editoraPopupSelect.appendChild(option2)
+        })
+    }
+}
+
+populateFiltros()
 
 function displayBooks(page: number) {
     const isTablet = window.innerWidth <= 768
@@ -158,5 +228,30 @@ document.getElementById('close-popup')?.addEventListener('click', closePopup)
 document.getElementById('livro-popup')?.addEventListener('click', (e) => {
     if (e.target === e.currentTarget) {
         closePopup()
+    }
+})
+
+document.getElementById('search-btn')?.addEventListener('click', () => {
+    const generoSelect = document.getElementById('genero') as HTMLSelectElement
+    const editoraSelect = document.getElementById('editora') as HTMLSelectElement
+    
+    const generoValue = generoSelect?.value !== 'Gênero' ? generoSelect?.value : undefined
+    const editoraValue = editoraSelect?.value !== 'Editora' ? editoraSelect?.value : undefined
+    
+    loadBooks(generoValue, editoraValue)
+})
+
+document.getElementById('filtrar-btn')?.addEventListener('click', () => {
+    const generoPopupSelect = document.getElementById('genero-popup') as HTMLSelectElement
+    const editoraPopupSelect = document.getElementById('editora-popup') as HTMLSelectElement
+    
+    const generoValue = generoPopupSelect?.value !== 'Gênero' ? generoPopupSelect?.value : undefined
+    const editoraValue = editoraPopupSelect?.value !== 'Editora' ? editoraPopupSelect?.value : undefined
+    
+    loadBooks(generoValue, editoraValue)
+    
+    const filterPopup = document.getElementById('filter-popup')
+    if (filterPopup) {
+        filterPopup.style.display = 'none'
     }
 })
