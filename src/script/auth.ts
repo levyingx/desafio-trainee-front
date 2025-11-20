@@ -33,3 +33,37 @@ if (form) {
         }
     }
 }
+
+const resetForm = document.getElementById('form-recuperar')
+
+if (resetForm) {
+    resetForm.onsubmit = async (e) => {
+        e.preventDefault()
+
+        const formData = new FormData(resetForm as HTMLFormElement)
+        const email = formData.get('email')
+
+        try {
+            const response = await fetch(api.url + '/auth/password/reset/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email
+                })
+            })
+
+            const data: {message: string} = await response.json()
+            console.log('Response:', data.message)
+
+            if (response.ok) {
+                window.alert(data.message)
+                window.location.href = 'login.html'
+            } else {
+                window.alert('Erro ao enviar e-mail de recuperação.')
+            }
+        } catch (error) {
+            console.log('Erro ao recuperar senha: ', error)
+            alert('Erro ao enviar e-mail de recuperação.')
+        }
+    }
+}
