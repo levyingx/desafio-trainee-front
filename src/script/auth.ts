@@ -53,16 +53,14 @@ if (resetForm) {
             })
 
             const data: {message: string} = await response.json()
-            console.log('Response:', data.message)
 
             if (response.ok) {
-                window.alert(data.message)
+                alert(data.message)
                 window.location.href = 'login.html'
             } else {
-                window.alert('Erro ao enviar e-mail de recuperação.')
+                alert(data.message)
             }
         } catch (error) {
-            console.log('Erro ao recuperar senha: ', error)
             alert('Erro ao enviar e-mail de recuperação.')
         }
     }
